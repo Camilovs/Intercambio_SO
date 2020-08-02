@@ -6,15 +6,11 @@ import java.util.NoSuchElementException;
 public class Queue<Item> implements Iterable<Item> {
 
     private Node<Item> first;
-
     private Node<Item> last;
-
     private int n;
-
+    
     private static class Node<Item> {
-
         private Item item;
-
         private Node<Item> next;
     }
 
@@ -75,21 +71,16 @@ public class Queue<Item> implements Iterable<Item> {
     }
 
     private class ListIterator<Item> implements Iterator<Item> {
-
         private Node<Item> current;
-
         public ListIterator(Node<Item> first) {
             current = first;
         }
-
         public boolean hasNext() {
             return current != null;
         }
-
         public void remove() {
             throw new UnsupportedOperationException();
         }
-
         public Item next() {
             if (!hasNext())
                 throw new NoSuchElementException();

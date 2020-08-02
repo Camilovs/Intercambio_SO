@@ -5,18 +5,17 @@ public class Proceso {
     private String etiqueta;
     private int id;
     private int tamanio;
-
     private int tiempo_computo;
-
     private boolean estado;
-
-    private int prioridad = 0;
+    private static final int DEFAULT_INITIAL_PRIORITY = 1;
+    private int prioridad;
 
     public Proceso(String e, int t, int tc) {
         etiqueta = e;
         tamanio = t;
         tiempo_computo = tc;
         estado = true;
+        prioridad = DEFAULT_INITIAL_PRIORITY;
     }
 
     public Proceso(String e, int t, int tc, int prio) {
@@ -24,7 +23,7 @@ public class Proceso {
         tamanio = t;
         tiempo_computo = tc;
         estado = true;
-        prioridad = 0;
+        prioridad = prio;
     }
 
     public void disminuirComputo(int tiempoCumplido) {

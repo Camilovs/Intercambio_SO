@@ -3,12 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Camilo/Dropbox/UTAL/Sistemas%20Operativos/U3%20Memoria/Lab1%20Intercambio/Intercambio_SO/src/App/main.java</file>
-            <file>file:/E:/Camilo/Dropbox/UTAL/Sistemas%20Operativos/U3%20Memoria/Lab1%20Intercambio/Intercambio_SO/src/cpu/Cpu.java</file>
-            <file>file:/E:/Camilo/Dropbox/UTAL/Sistemas%20Operativos/U3%20Memoria/Lab1%20Intercambio/Intercambio_SO/src/proceso/Proceso.java</file>
-            <file>file:/E:/Camilo/Dropbox/UTAL/Sistemas%20Operativos/U3%20Memoria/Lab1%20Intercambio/Intercambio_SO/src/memoriavirtual/Almacen.java</file>
-            <file>file:/E:/Camilo/Dropbox/UTAL/Sistemas%20Operativos/U3%20Memoria/Lab1%20Intercambio/Intercambio_SO/src/memoriavirtual/Memoria.java</file>
-            <file>file:/E:/Camilo/Dropbox/UTAL/Sistemas%20Operativos/U3%20Memoria/Lab1%20Intercambio/Intercambio_SO/src/cpu/Planificador.java</file>
+            <file>file:/E:/Camilo/Desktop/GIt/Intercambio_SO/src/utilidad/Queue.java</file>
+            <file>file:/E:/Camilo/Desktop/GIt/Intercambio_SO/src/memoriavirtual/ColaProcesos.java</file>
+            <file>file:/E:/Camilo/Desktop/GIt/Intercambio_SO/src/cpu/Cpu.java</file>
         </group>
     </open-files>
 </project-private>

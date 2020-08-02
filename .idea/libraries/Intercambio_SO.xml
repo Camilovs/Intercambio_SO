@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Intercambio_SO">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/Intercambio_SO.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

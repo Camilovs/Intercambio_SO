@@ -53,12 +53,12 @@ public class Planificador {
         }
     }
     private void crearProcesos() {
-        Proceso p1 = crearProceso("explorer.exe", 100, 5000);
-        Proceso p2 = crearProceso("adobe.exe", 500, 2500);
-        Proceso p3 = crearProceso("firefox.exe", 2000, 500);
-        Proceso p4 = crearProceso("antirus.exe", 700, 1000);
-        Proceso p5 = crearProceso("discord.exe", 500, 3000);
-        Proceso p6 = crearProceso("chrome.exe", 3000, 7000);
+        Proceso p1 = crearProceso("explorer.exe", 100, 5000,0);
+        Proceso p2 = crearProceso("adobe.exe", 500, 2500,1);
+        Proceso p3 = crearProceso("firefox.exe", 2000, 500,0);
+        Proceso p4 = crearProceso("antirus.exe", 700, 1000,1);
+        Proceso p5 = crearProceso("discord.exe", 500, 3000,0);
+        Proceso p6 = crearProceso("chrome.exe", 3000, 7000,1);
         Proceso p7 = crearProceso("cmd.exe", 50, 100);
         if (!memoriamain.addProceso(p1)) {
             almacen.addProceso(p1);
@@ -87,7 +87,8 @@ public class Planificador {
         if (!memoriamain.addProceso(p7)) {
             almacen.addProceso(p7);
         }
-        ;
+        cola.printColaProcesos();
+        
     }
 
     private Proceso crearProceso(String nombre, int tamanio, int tc) {
@@ -95,19 +96,25 @@ public class Planificador {
         cola.addProceso(p);
         return p;
     }
+    private Proceso crearProceso(String nombre, int tamanio, int tc,int prio) {
+        Proceso p = new Proceso(nombre, tamanio, tc, prio);
+        cola.addProceso(p);
+        return p;
+    }
+    
     public void ejecucion() {
         crearProcesos();
         while (true) {
             sleeper.Sleep(1000);
-            Proceso p = elegirProceso();
-            if (p != null) {
-                System.out.println("\nPlanificando " + p.getEtiqueta() + " " 
-                        + p.getTamanio() + "MB" + " tiempo restante: " 
-                        + p.getTiempo_computo() + "ms");
-                if (memoriamain.isInMemoria(p)) {
-                    ejecutarProceso(p);
+            Proceso proceso = elegirProceso();
+            if (proceso != null) {
+                System.out.println("\nPlanificando " + proceso.getEtiqueta() + " " 
+                        + proceso.getTamanio() + "MB" + " tiempo restante: " 
+                        + proceso.getTiempo_computo() + "ms");
+                if (memoriamain.isInMemoria(proceso)) {
+                    ejecutarProceso(proceso);
                 } else {
-                    intercambio(p);
+                    intercambio(proceso);
                 }
             } else {
                 System.out.println("===============Todos los procesos ejecutados=============");
