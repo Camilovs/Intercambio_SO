@@ -1,7 +1,6 @@
-package memoriavirtual;
+package proceso;
 
 import java.util.Comparator;
-import utilidad.Queue;
 import proceso.Proceso;
 import java.util.PriorityQueue;
 import utilidad.ProcesoComparator;
@@ -17,9 +16,6 @@ public class ColaProcesos {
     }
     public void addProceso(Proceso p){
         procesosPrioridad.offer(p);
-//        System.out.println("-");
-//        printColaProcesos();
-        
     }
     public Proceso getProceso(){
         return procesosPrioridad.remove();

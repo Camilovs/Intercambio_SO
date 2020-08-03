@@ -9,23 +9,42 @@ public class Proceso {
     private boolean estado;
     private static final int DEFAULT_INITIAL_PRIORITY = 1;
     private int prioridad;
-
-    public Proceso(String e, int t, int tc) {
+    
+    /**
+     * Constructor del proceso sin prioridad
+     * @param pid id del proceso
+     * @param e etiqueta o nombre del proceso
+     * @param t tamanio del proceso en mb
+     * @param tc tiempo de computo necesario para que el proceso se ejecute
+     */
+    public Proceso(int pid, String e, int t, int tc) {
+        id = pid;
         etiqueta = e;
         tamanio = t;
         tiempo_computo = tc;
         estado = true;
         prioridad = DEFAULT_INITIAL_PRIORITY;
     }
-
-    public Proceso(String e, int t, int tc, int prio) {
+    /**
+     * Constructor del proceso con prioridad
+     *@param pid id del proceso
+     * @param e etiqueta o nombre del proceso
+     * @param t tamanio del proceso en mb
+     * @param tc tiempo de computo necesario para que el proceso se ejecute
+     * @param prio prioridad del proceso (0 maxima - 1 minima)
+     */
+    public Proceso(int pid, String e, int t, int tc, int prio) {
+        id = pid;
         etiqueta = e;
         tamanio = t;
         tiempo_computo = tc;
         estado = true;
         prioridad = prio;
     }
-
+    /**
+     * disminuye el tiempo de computo del proceso
+     * @param tiempoCumplido tiempo disminuido
+     */
     public void disminuirComputo(int tiempoCumplido) {
         if (getTiempo_computo() > 0) {
             setTiempo_computo(getTiempo_computo() - tiempoCumplido);
@@ -72,4 +91,13 @@ public class Proceso {
     public void setPrioridad(int prioridad) {
         this.prioridad = prioridad;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
 }

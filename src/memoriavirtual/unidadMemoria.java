@@ -6,34 +6,36 @@
 package memoriavirtual;
 
 import java.util.ArrayList;
+
+import bloque.Bloque;
 import proceso.Proceso;
 
-/**
- *
- * @author Camilo
- */
 public class unidadMemoria {
-    
+
+    private ArrayList<Bloque> bloques;
     private ArrayList<Proceso> procesos;
     private int tamanio;
     private int tamanio_libre;
     public unidadMemoria(int t){
         procesos = new ArrayList<>();
+        bloques = new ArrayList<>();
         tamanio = t;
         tamanio_libre = tamanio;
     }
-    public boolean addProceso(Proceso p) {
+    /*public boolean addProceso(Proceso p) {
         if (p.getTamanio() <= getTamanio_libre()) {
             procesos.add(p);
             setTamanio_libre(getTamanio_libre() - p.getTamanio());
-            System.out.println(p.getEtiqueta() + " agregado");
+            System.out.println(p.getEtiqueta()+" pid: "+p.getId() + " agregado");
             System.out.println("Memoria restante: " + getTamanio_libre() + "MB");
             return true;
         } else {
             return false;
         }
+    }*/
+    public boolean addProceso(Proceso p){
+        return true;
     }
-    
     public boolean quitarProceso(Proceso p) {
         if (procesos.remove(p)) {
             setTamanio_libre(getTamanio_libre() + p.getTamanio());

@@ -8,10 +8,6 @@ package utilidad;
 import java.util.Comparator;
 import proceso.Proceso;
 
-/**
- *
- * @author Camilo
- */
 public class ProcesoComparator implements Comparator<Proceso> {
     
     @Override
