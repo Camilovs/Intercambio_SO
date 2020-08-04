@@ -3,20 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package memoriavirtual;
+package memoria;
 
 import java.util.ArrayList;
 
-import bloque.Bloque;
 import proceso.Proceso;
 
-public class unidadMemoria {
+public class UnidadMemoria {
 
-    private ArrayList<Bloque> bloques;
+    private ArrayList<Marco> bloques;
     private ArrayList<Proceso> procesos;
     private int tamanio;
     private int tamanio_libre;
-    public unidadMemoria(int t){
+    public UnidadMemoria(int t){
         procesos = new ArrayList<>();
         bloques = new ArrayList<>();
         tamanio = t;

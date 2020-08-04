@@ -1,5 +1,7 @@
 package proceso;
 
+import java.util.ArrayList;
+
 public class Proceso {
 
     private String etiqueta;
@@ -9,6 +11,7 @@ public class Proceso {
     private boolean estado;
     private static final int DEFAULT_INITIAL_PRIORITY = 1;
     private int prioridad;
+    private ArrayList<Pagina> paginas;
     
     /**
      * Constructor del proceso sin prioridad

@@ -1,4 +1,4 @@
-package App;
+package interfaz;
 
 public class MenuNavegacion {
 }

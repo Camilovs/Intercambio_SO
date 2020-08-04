@@ -3,16 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bloque;
+package memoria;
 
 import proceso.Proceso;
 
-public class Bloque {
+/**
+ * Clase que respresenta la equivalencia de una pagina pero en memoria fisica.
+ */
+public class Marco {
 
     private int id;
     private int tamanio;
     private boolean ocupado;
-    public Bloque(){
+
+    public Marco(){
         id=0;
         tamanio = 100;
         ocupado = false;

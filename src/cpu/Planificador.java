@@ -1,7 +1,7 @@
 package cpu;
 
 import proceso.ColaProcesos;
-import memoriavirtual.unidadMemoria;
+import memoria.UnidadMemoria;
 import proceso.Proceso;
 import utilidad.Sleeper;
 
@@ -10,16 +10,16 @@ public class Planificador {
     private final Sleeper sleeper;
     private final Cpu core1;
     private final ColaProcesos cola;
-    private final unidadMemoria memoriamain;
-    private final unidadMemoria almacen;
+    private final UnidadMemoria memoriamain;
+    private final UnidadMemoria almacen;
     private int pid = 1;
 
     public Planificador() {
         core1 = new Cpu();
         sleeper = new Sleeper();
         cola = new ColaProcesos();
-        memoriamain = new unidadMemoria(6000);
-        almacen = new unidadMemoria(20000);
+        memoriamain = new UnidadMemoria(6000);
+        almacen = new UnidadMemoria(20000);
     }
     /**
      * obtiene el proceso de la cola de prioridad
